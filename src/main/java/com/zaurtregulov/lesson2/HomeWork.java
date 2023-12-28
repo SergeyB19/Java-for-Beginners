@@ -29,10 +29,10 @@ public class HomeWork {
         System.out.println(i3);
         System.out.println(i4);
 
-        long l1 = 123456789;
+        long l1 = 123456789L;
         long l2 = 0x75bcd15;
-        long l3 = 0b111010110111100110100010101;
-        long l4 = 0726746425;
+        long l3 = 0b111010110111100110100010101L;
+        long l4 = 0726746425L;
         System.out.println(l1);
         System.out.println(l2);
         System.out.println(l3);
@@ -43,7 +43,7 @@ public class HomeWork {
         System.out.println(f1);
         System.out.println(f2);
 
-        double d1 = 1.23;
+        double d1 = 1.23D;
         double d2 = 1.24;
         System.out.println(d1);
         System.out.println(d2);
