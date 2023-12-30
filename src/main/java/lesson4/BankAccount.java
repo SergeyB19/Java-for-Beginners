@@ -6,6 +6,16 @@ public class BankAccount {
 
     double balance = 100;
 
+    double popolnenieScheta(double max) {
+        balance += max;
+        return balance;
+    }
+
+    double snyatieSoScheta(double min) {
+        balance -= min;
+        return balance;
+    }
+
 
 }
 
@@ -18,8 +28,9 @@ class BankAccountTest {
 
 
         MyAccount.id = 1;
-//        MyAccount.name = "Zaur";
+        MyAccount.name = "Zaur";
         MyAccount.balance = 12.35;
+        MyAccount.popolnenieScheta(190.0);
 
         YourAccount.id = 2;
         YourAccount.name = "Mike";
@@ -31,6 +42,7 @@ class BankAccountTest {
 
         System.out.println(YourAccount.name);
         System.out.println(MyAccount.name);
+        System.out.println(MyAccount.balance);
 
     }
 }

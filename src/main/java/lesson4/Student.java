@@ -12,7 +12,15 @@ public class Student {
 }
 
 class StudentTest {
+
+    double averageGradeMethod(Student student){
+        return (student.mathGrade + student.economicsGrade + student.foreignLanguageGrade) / 3;
+    }
+
     public static void main(String[] args) {
+        StudentTest st = new StudentTest();
+
+
         Student student1 = new Student();
         Student student2 = new Student();
         Student student3 = new Student();
@@ -41,9 +49,11 @@ class StudentTest {
         student3.economicsGrade = 9;
         student3.foreignLanguageGrade = 1;
 
-        System.out.println("Имя "+student1.name + " Фамилия " + student1.surname + " Cредняя оценка " + ((student1.mathGrade+student1.economicsGrade+student1.foreignLanguageGrade)/3));
-        System.out.println("Имя "+student2.name + " Фамилия " + student2.surname + " Cредняя оценка " + ((student2.mathGrade+student2.economicsGrade+student2.foreignLanguageGrade)/3));
-        System.out.println("Имя "+student3.name + " Фамилия " + student3.surname + " Cредняя оценка " + ((student3.mathGrade+student3.economicsGrade+student3.foreignLanguageGrade)/3));
+
+
+        System.out.println("Имя "+student1.name + " Фамилия " + student1.surname + " Cредняя оценка " + st.averageGradeMethod(student1));
+        System.out.println("Имя "+student2.name + " Фамилия " + student2.surname + " Cредняя оценка " + st.averageGradeMethod(student2));
+        System.out.println("Имя "+student3.name + " Фамилия " + student3.surname + " Cредняя оценка " + st.averageGradeMethod(student3));
     }
-    }
+}
 
