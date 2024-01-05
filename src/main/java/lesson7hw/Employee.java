@@ -1,10 +1,12 @@
 package lesson7hw;
 
 public class Employee {
-    protected double salary;
+    int id;
     public String surname;
+    int age;
+    private double salary;
+    String department;
 
-    protected int id;
 
     public void showSalary() {
         System.out.println(salary);
@@ -18,16 +20,16 @@ public class Employee {
         System.out.println(id);
     }
 
-     public Employee(double salary) {
-        this.salary = salary;
+    public Employee(int id) {
+        this.id = id;
     }
 
-    public Employee(String surname) {
+    Employee(String surname) {
         this.surname = surname;
     }
 
-    protected Employee(int id) {
-        this.id = id;
+    private Employee(double salary) {
+        this.salary = salary;
     }
 
     public static void main(String[] args) {
