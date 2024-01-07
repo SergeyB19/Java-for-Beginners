@@ -8,16 +8,13 @@ public class Car {
     int String = 2;
 
 
-
     String color;
-    int a = 10;
+    public static int a = 10;
     String engine;
-    static int count;
+    public static int count;
 
 
-
-
-    Car(String color, String engine) {
+    public Car(String color, String engine) {
         this.count++;
         this.color = color;
         this.engine = engine;
@@ -28,7 +25,7 @@ public class Car {
     }
 
     public static void main(String[] args) {
-        Car c = new Car("red","V6");
+        Car c = new Car("red", "V6");
         int a = 10;
         a = 10;
 //        System.out.println(c.color);
