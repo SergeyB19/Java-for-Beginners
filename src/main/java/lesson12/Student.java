@@ -73,11 +73,11 @@ public class Student {
     }
 
     public void equalsStudentAtrubute(Student st1, Student st2) {
-        if (st1.name == st2.name) {
+        if (st1.name.equals(st2.name)) {
             if (st1.course == st2.course) {
                 if (st1.grade == st2.grade) {
                     System.out.println("Имена студентов, курсы и оценки одинаковые");
-                } else if ((st1.name == st2.name) && (st1.course == st2.course) || (st1.grade != st2.grade)) {
+                } else if (((st1.name == st2.name) && (st1.course == st2.course)) || (st1.grade != st2.grade)) {
                     System.out.println("Имена студентов и курсы одинаковые, но оценки различаются");
                 } else if ((st1.name == st2.name) || (st1.course != st2.course)) {
                     System.out.println("Имена студентов одинаковые, но курсы различаются");
