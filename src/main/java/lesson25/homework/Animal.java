@@ -5,7 +5,7 @@ public abstract class Animal {
         this.name = name;
     }
 
-    String name;
+    public String name;
     abstract void eat();
     abstract void sleep();
 
