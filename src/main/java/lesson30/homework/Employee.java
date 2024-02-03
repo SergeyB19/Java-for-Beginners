@@ -23,7 +23,7 @@ class TestEmployee {
         System.out.println("Имя: " + employee.name + " Департамент: " + employee.department + " Зарплата: " + employee.salary);
     }
 
-    void filtraciyaRabotnikov(ArrayList<Employee> aLEmp, Predicate<Employee> predicate)   {
+    void filtraciyaRabotnikov(ArrayList<Employee> aLEmp, Predicate<Employee> predicate) {
         for (Employee emp : aLEmp) {
             if (predicate.test(emp)) {
                 printEmployee(emp);
@@ -31,7 +31,7 @@ class TestEmployee {
         }
     }
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         ArrayList<Employee> arrayList = new ArrayList<>();
         Employee emp1 = new Employee("Employee1", "Sales", 1_000_000);
         Employee emp2 = new Employee("Employee2", "IT", 2_000_000);
@@ -44,13 +44,10 @@ class TestEmployee {
         arrayList.add(emp4);
         arrayList.add(emp5);
         TestEmployee te = new TestEmployee();
-        for (Employee e : arrayList) {
-            System.out.println(e.name);
-        }
+        te.filtraciyaRabotnikov(arrayList, x -> x.department.equals("IT") && x.salary > 200);
+        te.filtraciyaRabotnikov(arrayList, x -> x.name.startsWith("E") && x.salary != 200);
+        te.filtraciyaRabotnikov(arrayList, x -> x.name.equals(x.department));
 
-/*        te.filtraciyaRabotnikov(arrayList, (Employee emp) -> return {(emp.department == "IT") && (emp.salary > 200)});
-        te.filtraciyaRabotnikov(arrayList, (Employee emp) -> return {emp.name == "E" && emp.salary != 450});
-        te.filtraciyaRabotnikov(arrayList, (Employee emp) -> return {emp.name == emp.department});*/
 
     }
 }
